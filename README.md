@@ -13,8 +13,13 @@ TASK:
 Получить список пунктов (самые свежие идут первыми)
 
 
-#1 start project:
+# start project:
 docker-compose up -d
 
 API Endpoint: ../users/
 method: get post put delete
+
+API Endpoint: ../users/login - return id and new token
+method: get
+
+

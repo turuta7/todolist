@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-console":"off",
+    "prefer-rest-params":"off",
+    "max-classes-per-file": ["error", 2]
+    }
+}

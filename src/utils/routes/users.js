@@ -219,12 +219,12 @@ router.put('/:id', async (ctx) => {
 router.delete('/:id', async (ctx) => {
   const { id } = ctx.params;
   // authorization user by token and by id
-  // const autUser = await authorizationUser(ctx);
-  // if (!autUser.status || id !== autUser.id) {
-  //   ctx.status = 403;
-  //   ctx.body = { message: 'you are not authorized' };
-  //   return null;
-  // }
+  const autUser = await authorizationUser(ctx);
+  if (!autUser.status || id !== autUser.id) {
+    ctx.status = 403;
+    ctx.body = { message: 'you are not authorized' };
+    return null;
+  }
 
   // delete user by id
   const deleteUserId = async () => {
